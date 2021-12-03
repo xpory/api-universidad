@@ -18,22 +18,23 @@ class AlumnosSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('usuarios')->insert([
-            'nombre' => 'Jerry Josué',
-            'apellidos' => 'Argota Melgar',
-            'email' => 'jerry_melgar@hotmail.com',
-            'carnet' => '2527972011',
-            'foto' => 'https://conalepags.edu.mx/escolares/img/estudiante225x225.png',
-            'password' => Hash::make('123456')
-        ]);
+        $alumno = new Usuario();
+        $alumno->nombre = "Jerry Josué";
+        $alumno->apellidos = "Argota Melgar";
+        $alumno->email = "jerry_melgar@hotmail.com";
+        $alumno->carnet = "2527972011";
+        $alumno->foto = "https://conalepags.edu.mx/escolares/img/estudiante225x225.png";
+        $alumno->password = Hash::make('123456');
+        $alumno->save();
 
-        DB::table('usuarios')->insert([
-            'nombre' => 'Luis Ernesto',
-            'apellidos' => 'Cruz Ayala',
-            'email' => 'luis_hernesto@outlook.com',
-            'carnet' => '2515302007',
-            'foto' => 'https://conalepags.edu.mx/escolares/img/estudiante225x225.png',
-            'password' => Hash::make('123456')
-        ]);
+        $alumno2 = new Usuario();
+        $alumno2->nombre = "Luis Ernesto";
+        $alumno2->apellidos = "Cruz Ayala";
+        $alumno2->email = "luis_hernesto@outlook.com";
+        $alumno2->carnet = "2515302007";
+        $alumno2->foto = "https://conalepags.edu.mx/escolares/img/estudiante225x225.png";
+        $alumno2->password = Hash::make('123456');
+        $alumno2->save();
+
     }
 }

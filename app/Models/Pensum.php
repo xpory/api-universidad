@@ -19,4 +19,14 @@ class Pensum extends Model
         'created_at' => 'datetime:Y-m-d',
         'updated_at' => 'datetime:Y-m-d'
     ];
+
+    public function plan()
+    {
+        return $this->hasOne('App\Models\PlanEstudio', 'id');
+    }
+
+    public function materia()
+    {
+        return $this->hasMany('App\Models\Materia', 'id');
+    }
 }

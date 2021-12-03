@@ -16,6 +16,12 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call([
             AlumnosSeeder::class,
+            CarreraSeeder::class,
+            PlanEstudioSeeder::class,
+            MateriaSeeder::class,
+            PensumSeeder::class,
+            HorarioSeeder::class,
+            EvaluacionSeeder::class,
         ]);
     }
 }

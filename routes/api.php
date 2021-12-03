@@ -1,7 +1,13 @@
 <?php
 
 use App\Http\Controllers\AlumnoController;
-use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\CarreraController;
+use App\Http\Controllers\EvaluacionController;
+use App\Http\Controllers\HorarioController;
+use App\Http\Controllers\MateriaController;
+use App\Http\Controllers\NotaController;
+use App\Http\Controllers\PensumController;
+use App\Http\Controllers\PlanEstudioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +23,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('alumnos', AlumnoController::class);
+Route::resource('carreras', CarreraController::class);
+Route::resource('evaluaciones', EvaluacionController::class);
+Route::resource('horarios', HorarioController::class);
+Route::resource('materias', MateriaController::class);
+Route::resource('notas', NotaController::class);
+Route::resource('pensum', PensumController::class);
+Route::resource('planes', PlanEstudioController::class);

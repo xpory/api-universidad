@@ -19,4 +19,9 @@ class Materia extends Model
         'created_at' => 'datetime:Y-m-d',
         'updated_at' => 'datetime:Y-m-d'
     ];
+
+    public function pensum()
+    {
+        $this->belongsTo('App\Models\pensum');
+    }
 }
